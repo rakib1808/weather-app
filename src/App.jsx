@@ -40,29 +40,40 @@ function App() {
         flexDirection: "column"
       }}>
       <h1>🌤️ Weather App</h1>
+      <div>
       <input
         type="text"
         placeholder="Enter city name"
         value={city}
         onChange={(e) => setCity(e.target.value)}
-        style={{ padding: "10px", width: "200px", fontSize: "16px", }}
+        style={{ 
+          padding: "10px", 
+          width: "200px", 
+          fontSize: "16px", 
+          outline: "none", 
+          borderColor:"", 
+          borderRadius: '8px',}}
       />
       <button
         onClick={getWeather}
         style={{
           padding: "10px 30px",
           marginTop: "10px",
+          marginLeft:"10px",
           fontSize: "16px",
           cursor: "pointer",
+          borderRadius: '8px',
+          
         }}
       >
         Search
       </button>
+      </div>
 
       {error && <p style={{ color: "red", marginTop: "20px" }}>{error}</p>}
 
       {weather && (
-        <div style={{ marginTop: "30px" }}>
+        <div style={{ marginTop: "30px", color:"whitesmoke", }}>
           <h2>{weather.name}</h2>
           <p>🌡️ Temperature: {weather.main.temp} °C</p>
           <p>🌥️ Condition: {weather.weather[0].description}</p>
