@@ -30,20 +30,28 @@ function App() {
   };
 
   return (
-    <div style={{ fontFamily: "sans-serif", textAlign: "center", padding: "20px" }}>
+    <div style={{ 
+        fontFamily: "sans-serif", 
+        textAlign: "center", 
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "80vh",
+        flexDirection: "column"
+      }}>
       <h1>🌤️ Weather App</h1>
       <input
         type="text"
         placeholder="Enter city name"
         value={city}
         onChange={(e) => setCity(e.target.value)}
-        style={{ padding: "10px", width: "200px", fontSize: "16px" }}
+        style={{ padding: "10px", width: "200px", fontSize: "16px", }}
       />
       <button
         onClick={getWeather}
         style={{
-          padding: "10px 20px",
-          marginLeft: "10px",
+          padding: "10px 30px",
+          marginTop: "10px",
           fontSize: "16px",
           cursor: "pointer",
         }}
